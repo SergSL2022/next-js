@@ -40,7 +40,7 @@ export default function Home() {
       </div>
 
       <h1>TESTING JENKINS DEPLOYMENT WITH ENVIRONMENTS</h1>
-      <p>test test test test</p>
+      <p>Jenkins</p>
     </main>
   );
 }
