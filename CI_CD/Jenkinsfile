@@ -1,6 +1,6 @@
 pipeline {
     agent{
-        label "netx-serg"
+        label "${NETX_WORKER}"
     }
 
     stages{
@@ -8,7 +8,8 @@ pipeline {
             steps{
                 sh """
                     pm2 stop next.slipchuk.site
-                    cd /home/serg/webapps/next.slipchuk.site
+                    cd ${NEXTJS_FOLDER}
+                    pwd
                     git pull
                     npm install
                 """
@@ -17,7 +18,8 @@ pipeline {
         stage("Build"){
             steps{
                 sh """
-                    cd /home/serg/webapps/next.slipchuk.site
+                    cd ${NEXTJS_FOLDER}
+                    pwd
                     npm run build
                 """
             }
