@@ -39,7 +39,8 @@ export default function Home() {
         />
       </div>
 
-      <h1>TEST TEST TEST</h1>
+      <h1>TEST2 TEST2 TEST2</h1>
+      <p>test test test test</p>
     </main>
   );
 }
