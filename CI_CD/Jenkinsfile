@@ -20,6 +20,9 @@ pipeline {
         stage("Build"){
             steps{
                 sh """
+                    whoami
+                    pwd
+                    ls -la
                     npm run build
                 """
             }
