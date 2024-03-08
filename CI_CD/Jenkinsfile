@@ -7,7 +7,7 @@ pipeline {
         stage("Install"){
             steps{
                 sh """
-                    ip a
+                    cd /home/serg/webapps/next.slipchuk.site
                     pwd
                     ls -la
                     git pull
