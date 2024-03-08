@@ -39,7 +39,7 @@ export default function Home() {
         />
       </div>
 
-      <h1>TEST2 TEST2 TEST2</h1>
+      <h1>TESTING JENKINS DEPLOYMENT</h1>
       <p>test test test test</p>
     </main>
   );
