@@ -1,0 +1,29 @@
+pipeline {
+    agent{
+        label "netx-serg"
+    }
+
+    stages{
+        stage("Install"){
+            steps{
+                sh """
+                    npm install
+                """
+            }
+        }
+        stage("Build"){
+            steps{
+                sh """
+                    npm run build
+                """
+            }
+        }
+        stage("Start"){
+            steps{
+                sh """
+                    pm2 restart next.slipchuk.site
+                """
+            }
+        }
+    }
+}
