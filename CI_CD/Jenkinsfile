@@ -21,6 +21,7 @@ pipeline {
             steps{
                 sh """
                     whoami
+                    cd /home/serg/webapps/next.slipchuk.site
                     pwd
                     ls -la
                     npm run build
