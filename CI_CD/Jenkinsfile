@@ -7,6 +7,7 @@ pipeline {
         stage("Install"){
             steps{
                 sh """
+                    pm2 stop next.slipchuk.site
                     cd /home/serg/webapps/next.slipchuk.site
                     pwd
                     ls -la
