@@ -7,7 +7,7 @@ pipeline {
         stage("Install"){
             steps{
                 sh """
-                    pm2 stop next.slipchuk.site
+                    pm2 stop ${NEXTJS_DOMAIN}
                     cd ${NEXTJS_FOLDER}
                     pwd
                     git pull
@@ -27,7 +27,7 @@ pipeline {
         stage("Start"){
             steps{
                 sh """
-                    pm2 restart next.slipchuk.site
+                    pm2 restart ${NEXTJS_DOMAIN}
                 """
             }
         }
